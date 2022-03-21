@@ -99,6 +99,10 @@ body{
             font-weight: 200;
             margin-bottom:13px;
             color:$Prim-Text-Colour;
+
+            .Credentials__Paragraph--Highlight{
+                color:$Highlight-Colour;
+            }
         }
     } 
 
@@ -125,6 +129,9 @@ body{
             font-weight: 200;
             margin-bottom:13px;
             color:$Prim-Text-Colour;
+            .Facts__Paragraph--Highlight{
+                color:$Highlight-Colour;
+            }
         }
 
         .Facts__Button{
