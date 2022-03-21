@@ -1,0 +1,165 @@
+@import "assets/_Colors.scss";
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color:$Background-Colour;
+    display:grid;
+    grid-template-columns:1fr;
+    font-family: 'Montserrat', sans-serif;
+    justify-items:center;
+    .Profile{
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        flex-wrap: wrap;
+        align-items:center;
+        
+        .Profile__Image{
+            width:40%;
+            display:inline;
+            border-radius:100em;
+            object-fit: cover;
+            margin:67px 0 31px 0;
+        }
+
+        .Profile__Headline1{
+            color:$Prim-Text-Colour;
+            font-weight:400;
+            font-size:23px;
+        }
+    }
+
+
+    .Skills{
+        background-color:$Box-Colour;
+        width:78%;
+        border-radius:1em;
+        padding:23px 10px 10px 8%;
+        box-sizing: border-box;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin:28px 0;
+        box-shadow:0 0 6px rgba($color: #000000, $alpha: .5);
+        .Skills__Headline2{
+            color:$Highlight-Colour;
+            font-size:23px;
+            font-weight:500;
+            margin-bottom:13px;
+        }
+
+        .Skills__Paragraph{
+            font-size:23px;
+            font-weight: 200;
+            margin-bottom:13px;
+            color:$Prim-Text-Colour;
+        }
+
+        .Skills__Button{
+            outline:none;
+            border:none;
+            //position:relative;
+            color:$Highlight-Colour;
+            background-color:transparent;
+            bottom:5%;
+            left:30%;
+            font-size:16px;
+            font-weight:200;
+            width:fit-content;
+            align-self:end;
+            margin-right:25px;
+            //margin:0 15% 0 auto;
+        }
+    }
+
+    .Credentials{
+        background-color:$Box-Colour;
+        width:78%;
+        border-radius:1em;
+        padding:23px 10px 10px 8%;
+        box-sizing: border-box;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin:28px 0;
+        box-shadow:0 0 6px rgba($color: #000000, $alpha: .5);
+        .Credentials__Headline2{
+            color:$Highlight-Colour;
+            font-size:23px;
+            font-weight:500;
+            margin-bottom:13px;
+        }
+
+        .Credentials__Paragraph{
+            font-size:23px;
+            font-weight: 200;
+            margin-bottom:13px;
+            color:$Prim-Text-Colour;
+        }
+    } 
+
+    .Facts{
+        background-color:$Box-Colour;
+        width:78%;
+        border-radius:1em;
+        padding:23px 10px 10px 8%;
+        box-sizing: border-box;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin:28px 0;
+        box-shadow:0 0 6px rgba($color: #000000, $alpha: .5);
+        .Facts__Headline2{
+            color:$Highlight-Colour;
+            font-size:23px;
+            font-weight:500;
+            margin-bottom:13px;
+        }
+
+        .Facts__Paragraph{
+            font-size:23px;
+            font-weight: 200;
+            margin-bottom:13px;
+            color:$Prim-Text-Colour;
+        }
+
+        .Facts__Button{
+            outline:none;
+            border:none;
+            //position:relative;
+            color:$Highlight-Colour;
+            background-color:transparent;
+            bottom:5%;
+            left:30%;
+            font-size:16px;
+            font-weight:200;
+            width:fit-content;
+            align-self:end;
+            margin-right:25px;
+            //margin:0 15% 0 auto;
+        }
+    }
+    .Links{
+        display:flex;
+        flex-direction:column;
+        flex-wrap: wrap;
+        .Links__Item{
+            display:flex;
+            text-decoration:none;
+            margin:21px 0;
+            .Links__Item__Image{
+                width:32px;
+            }
+            .Links__Item__Text{
+                color:$Highlight-Colour;
+                font-size:18px;
+                align-self:center;
+                margin-left:30px;
+            }
+        }
+    }
+}
