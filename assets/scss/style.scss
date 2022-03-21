@@ -62,17 +62,13 @@ body{
         .Skills__Button{
             outline:none;
             border:none;
-            //position:relative;
             color:$Highlight-Colour;
             background-color:transparent;
-            bottom:5%;
-            left:30%;
             font-size:16px;
             font-weight:200;
             width:fit-content;
             align-self:end;
             margin-right:25px;
-            //margin:0 15% 0 auto;
         }
     }
 
@@ -166,6 +162,94 @@ body{
                 font-size:18px;
                 align-self:center;
                 margin-left:30px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    body{
+        grid-template-columns:1.2fr 2fr;
+        .Profile{
+            width:55%;
+            grid-column:1/-1;
+            flex-direction: row;
+            justify-content: space-between;
+            margin:67px 0 31px 0;
+            .Profile__Image{
+                width:30%;
+                margin:0;
+            }
+    
+            .Profile__Headline1{
+                font-size:36px;
+            }
+        }
+        .Skills{
+            width:77.07%;
+            margin-left:10%;
+            .Skills__Headline2{
+                font-size:18px;
+            }
+    
+            .Skills__Paragraph{
+                font-size:18px;
+            }
+    
+            .Skills__Button{
+                font-size:14px;
+            }
+        }
+        .Credentials{
+            width:86.24%;
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            .Credentials__Headline2{
+                color:$Highlight-Colour;
+                font-size:18px;
+                grid-column:1/-1;
+                grid-row:1;
+            }
+    
+            .Credentials__Paragraph{
+                font-size:18px;  
+                grid-row:2;  
+                width:73.5%;
+            }
+        }
+
+        .Facts{
+            width:77.07%;
+            margin-left:10%;
+            //height:fit-content;
+            .Facts__Headline2{
+                font-size:18px;
+            }
+    
+            .Facts__Paragraph{
+                font-size:18px;
+            }
+    
+            .Facts__Button{
+                font-size:14px;
+            }
+        }
+        .Links{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            grid-template-rows:50px 50px 50px;
+            justify-content:space-between;
+            width:86.24%;
+            margin-top:12px;
+            .Links__Item{
+                margin:16px 0;
+                height:fit-content;
+                .Links__Item__Image{
+                    width:32px;
+                }
+                .Links__Item__Text{
+                    font-size:18px;
+                }
             }
         }
     }
