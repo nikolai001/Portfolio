@@ -7,10 +7,12 @@
 
 body{
     background-color:$Background-Colour;
-    display:grid;
-    grid-template-columns:1fr;
     font-family: 'Montserrat', sans-serif;
-    justify-items:center;
+    main{
+        display:grid;
+        grid-template-columns:1fr;
+        justify-items:center;
+    }
     .Profile{
         width:100%;
         display:flex;
@@ -169,86 +171,164 @@ body{
 
 @media only screen and (min-width: 1000px) {
     body{
-        grid-template-columns:1.2fr 2fr;
-        .Profile{
-            width:55%;
-            grid-column:1/-1;
-            flex-direction: row;
-            justify-content: space-between;
-            margin:67px 0 31px 0;
-            .Profile__Image{
-                width:30%;
-                margin:0;
-            }
-    
-            .Profile__Headline1{
-                font-size:36px;
-            }
-        }
-        .Skills{
-            width:77.07%;
-            margin-left:10%;
-            .Skills__Headline2{
-                font-size:18px;
-            }
-    
-            .Skills__Paragraph{
-                font-size:18px;
-            }
-    
-            .Skills__Button{
-                font-size:14px;
-            }
-        }
-        .Credentials{
-            width:86.24%;
-            display:grid;
-            grid-template-columns:1fr 1fr;
-            .Credentials__Headline2{
-                color:$Highlight-Colour;
-                font-size:18px;
+        display:grid;
+        grid-template-columns:1fr;
+        justify-items:center;
+        main{
+            grid-template-columns:1.2fr 2fr;
+            max-width:1000px;
+            .Profile{
+                width:55%;
                 grid-column:1/-1;
-                grid-row:1;
-            }
-    
-            .Credentials__Paragraph{
-                font-size:18px;  
-                grid-row:2;  
-                width:73.5%;
-            }
-        }
-
-        .Facts{
-            width:77.07%;
-            margin-left:10%;
-            //height:fit-content;
-            .Facts__Headline2{
-                font-size:18px;
-            }
-    
-            .Facts__Paragraph{
-                font-size:18px;
-            }
-    
-            .Facts__Button{
-                font-size:14px;
-            }
-        }
-        .Links{
-            display:grid;
-            grid-template-columns:1fr 1fr;
-            grid-template-rows:50px 50px 50px;
-            justify-content:space-between;
-            width:86.24%;
-            margin-top:12px;
-            .Links__Item{
-                margin:16px 0;
-                height:fit-content;
-                .Links__Item__Image{
-                    width:32px;
+                flex-direction: row;
+                justify-content: space-between;
+                margin:67px 0 31px 0;
+                .Profile__Image{
+                    width:30%;
+                    margin:0;
                 }
-                .Links__Item__Text{
+        
+                .Profile__Headline1{
+                    font-size:36px;
+                }
+            }
+
+            .Effect__Skills{
+                grid-column:1/-2;
+                width:77.07%;
+                grid-row:2;
+                background-color:$Highlight-Colour;
+                border-radius:1em;
+                padding:23px 10px 10px 8%;
+                box-sizing: border-box;
+                height:210px;
+                margin:29px 0 0 37.5px;
+                transition:margin-top .4s,margin-left .4s;
+            }
+
+            .Effect__Skills--Toggled{
+                margin-top:13px;
+                margin-left:7px;
+            }
+
+            .Skills{
+                grid-column:1/-2;
+                width:77.07%;
+                margin-left:10%;
+                grid-row:2;
+                height:216.5px;
+                .Skills__Effect{
+                    width:30%;
+                    height:216.5px;
+                    background-color:$Highlight-Colour;
+                    border-radius:1em;
+                }
+
+                .Skills__Headline2{
                     font-size:18px;
+                }
+        
+                .Skills__Paragraph{
+                    font-size:18px;
+                }
+        
+                .Skills__Button{
+                    font-size:14px;
+                }
+            }
+
+            .Effect__Credentials{
+                grid-column:2/3;
+                width:86.24%;
+                grid-row:2;
+                background-color:$Highlight-Colour;
+                border-radius:1em;
+                padding:23px 10px 10px 8%;
+                box-sizing: border-box;
+                height:210px;
+                margin:29px 0 0 0;
+                transition:margin-top .4s,margin-right .4s;
+            }
+
+            .Effect__Credentials--Toggled{
+                margin-top:13px;
+                margin-right:28px;
+            }
+            
+            .Credentials{
+                height:216.5px;
+                width:86.24%;
+                grid-column:2/3;
+                grid-row:2;
+                display:grid;
+                grid-template-columns:1fr 1fr;
+                .Credentials__Headline2{
+                    color:$Highlight-Colour;
+                    font-size:18px;
+                    grid-column:1/-1;
+                    grid-row:1;
+                }
+        
+                .Credentials__Paragraph{
+                    font-size:18px;  
+                    grid-row:2;  
+                    width:73.5%;
+                }
+            }
+
+            .Effect__Facts{
+                grid-column:1/-2;
+                width:77.07%;
+                grid-row:3;
+                background-color:$Highlight-Colour;
+                border-radius:1em;
+                padding:23px 10px 10px 8%;
+                box-sizing: border-box;
+                height:210px;
+                margin:29px 0 0 37.5px;
+                transition:margin-top .4s,margin-left .4s;
+            }
+
+            .Effect__Facts--Toggled{
+                margin-top:13px;
+                margin-left:7px;
+            }
+
+            .Facts{
+                grid-column:1/-2;
+                grid-row:3;
+                width:77.07%;
+                margin-left:10%;
+                height:216.5px;
+                //height:fit-content;
+                .Facts__Headline2{
+                    font-size:18px;
+                }
+        
+                .Facts__Paragraph{
+                    font-size:18px;
+                }
+        
+                .Facts__Button{
+                    font-size:14px;
+                }
+            }
+            .Links{
+                display:grid;
+                grid-template-columns:1fr 1fr;
+                grid-template-rows:50px 50px 50px;
+                justify-content:space-between;
+                width:86.24%;
+                margin-top:12px;
+                .Links__Item{
+                    margin:16px 0;
+                    height:fit-content;
+                    .Links__Item__Image{
+                        width:32px;
+                    }
+                    .Links__Item__Text{
+                        font-size:18px;
+                    }
                 }
             }
         }
