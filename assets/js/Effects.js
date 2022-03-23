@@ -4,6 +4,7 @@ let Credentials = document.querySelector(".Credentials")
 let EffectsCredentials = document.querySelector(".Effect__Credentials")
 let Facts = document.querySelector(".Facts")
 let EffectsFacts = document.querySelector(".Effect__Facts")
+let Links = document.querySelector(".Links")
 
 console.log(EffectSkills);
 
@@ -29,4 +30,14 @@ Facts.addEventListener("mouseover",function(event){
 
 Facts.addEventListener("mouseleave",function(event){
     EffectsFacts.classList.remove("Effect__Facts--Toggled")
+})
+
+console.log(Links.querySelector("button"));
+
+Links.querySelector("button").addEventListener("click",function(event){
+    if (!document.querySelector(".Email").classList.contains("Email--Toggled")){
+       navigator.clipboard.writeText("nikolai@raahauge.eu");
+        document.querySelector(".Email").classList.add("Email--Toggled")
+        setTimeout(function(){ document.querySelector(".Email").classList.remove("Email--Toggled");},3000)
+    }
 })

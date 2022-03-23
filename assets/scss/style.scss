@@ -12,6 +12,38 @@ body{
         display:grid;
         grid-template-columns:1fr;
         justify-items:center;
+        .Email{
+           position:fixed;
+           background-color:$Box-Colour;
+           border-radius:1em;
+           width:60%;
+           text-align:center; 
+           bottom:5%;
+           left:-70%;
+           box-shadow:0 0 6px rgba($color: #000000, $alpha: .5);
+           transition:left 0.5s;
+           display:flex;
+           flex-direction:column;
+           padding:5px 0;
+           .Email__Text{
+               font-size:18px;
+               color:$Prim-Text-Colour;
+               margin-left:2%;
+               word-break: break-all;
+               .Email__Text--Highlight{
+                   color: $Highlight-Colour;
+               }
+           }
+        }
+        .Email--Toggled{
+            bottom:5%;
+            left:20%;
+        }
+        .Email__Link{
+            color: $Highlight-Colour;
+            font-weight: 500;
+            margin:5px 0;
+        }
     }
     .Profile{
         width:100%;
@@ -156,6 +188,11 @@ body{
             display:flex;
             text-decoration:none;
             margin:21px 0;
+            background-color: transparent;
+            outline:none;
+            border:none;
+            width: fit-content;
+            cursor:pointer;
             .Links__Item__Image{
                 width:32px;
             }
@@ -177,6 +214,37 @@ body{
         main{
             grid-template-columns:1.2fr 2fr;
             max-width:1000px;
+
+            .Email{
+                width:30%;
+                text-align:center; 
+                bottom:-15%;
+                left:auto;
+                transition:bottom 0.5s;
+                display:grid;
+                grid-template-columns:2fr 1fr;
+                padding:5px 0;
+                max-width:320px;
+                .Email__Text{
+                    color:$Prim-Text-Colour;
+                    margin-left:2%;
+                    word-break: break-all;
+                    grid-column:1/2;
+                    .Email__Text--Highlight{
+                        color: $Highlight-Colour;
+                    }
+                }
+             }
+             .Email--Toggled{
+                 bottom:5%;
+             }
+             .Email__Link{
+                 color: $Highlight-Colour;
+                 font-weight: 500;
+                 margin:5px 0;
+                 grid-column:2/3;
+             }
+
             .Profile{
                 width:55%;
                 grid-column:1/-1;
