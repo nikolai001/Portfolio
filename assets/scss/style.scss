@@ -222,6 +222,7 @@ body {
                 box-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.5);  
                 padding:13px 13px 0 15px;
                 height:90vh;
+                overflow-y: scroll;
                 .Unfolded__Skills__Top{
                     display:flex;
                     flex-wrap: nowrap;
@@ -264,6 +265,7 @@ body {
                 box-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.5);  
                 padding:13px 13px 0 15px;
                 height:90vh;
+                overflow-y: scroll;
                 .Unfolded__Facts__Top{
                     display:flex;
                     flex-wrap: nowrap;
