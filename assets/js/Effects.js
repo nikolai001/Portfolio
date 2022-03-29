@@ -1,10 +1,17 @@
-let Skills = document.querySelector(".Skills")
-let EffectSkills = document.querySelector(".Effect__Skills")
-let Credentials = document.querySelector(".Credentials")
-let EffectsCredentials = document.querySelector(".Effect__Credentials")
-let Facts = document.querySelector(".Facts")
-let EffectsFacts = document.querySelector(".Effect__Facts")
-let Links = document.querySelector(".Links")
+const Skills = document.querySelector(".Skills")
+const EffectSkills = document.querySelector(".Effect__Skills")
+const Credentials = document.querySelector(".Credentials")
+const EffectsCredentials = document.querySelector(".Effect__Credentials")
+const Facts = document.querySelector(".Facts")
+const EffectsFacts = document.querySelector(".Effect__Facts")
+const Links = document.querySelector(".Links")
+const SkillsButton = document.querySelector(".Skills__Button")
+const FactsButton = document.querySelector(".Facts__Button")
+const Unfolded = document.querySelector(".Unfolded")
+const UnfoldedSkills = document.querySelector(".Unfolded__Skills")
+const UnfoldedFacts = document.querySelector(".Unfolded__Facts")
+const UnfoldedSkillsButton = document.querySelector(".Unfolded__Skills__Top__Button")
+const UnfoldedFactsButton = document.querySelector(".Unfolded__Facts__Top__Button")
 
 console.log(EffectSkills);
 
@@ -40,4 +47,32 @@ Links.querySelector("button").addEventListener("click",function(event){
         document.querySelector(".Email").classList.add("Email--Toggled")
         setTimeout(function(){ document.querySelector(".Email").classList.remove("Email--Toggled");},3000)
     }
+})
+
+SkillsButton.addEventListener("click",function(){
+    if (!Unfolded.classList.contains("Unfolded--Active")){
+        Unfolded.classList.add("Unfolded--Active")
+        UnfoldedSkills.classList.add("Unfolded__Element--Active")
+        document.querySelector("body").style.overflow = "hidden"
+    }
+})
+
+FactsButton.addEventListener("click",function(){
+    if (!Unfolded.classList.contains("Unfolded--Active")){
+        Unfolded.classList.add("Unfolded--Active")
+        UnfoldedFacts.classList.add("Unfolded__Element--Active")
+        document.querySelector("body").style.overflow = "hidden"
+    }
+})
+
+UnfoldedSkillsButton.addEventListener("click",function(){
+    Unfolded.classList.remove("Unfolded--Active")
+    UnfoldedSkills.classList.remove("Unfolded__Element--Active")
+    document.querySelector("body").style.overflow = "auto"
+})
+
+UnfoldedFactsButton.addEventListener("click",function(){
+    Unfolded.classList.remove("Unfolded--Active")
+    UnfoldedFacts.classList.remove("Unfolded__Element--Active")
+    document.querySelector("body").style.overflow = "auto"
 })

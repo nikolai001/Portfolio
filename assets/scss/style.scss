@@ -1,403 +1,548 @@
 @import "assets/_Colors.scss";
 
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-body{
-    background-color:$Background-Colour;
-    font-family: 'Montserrat', sans-serif;
-    main{
-        display:grid;
-        grid-template-columns:1fr;
-        justify-items:center;
-        .Email{
-           position:fixed;
-           background-color:$Box-Colour;
-           border-radius:1em;
-           width:60%;
-           text-align:center; 
-           bottom:5%;
-           left:-70%;
-           box-shadow:0 0 6px rgba($color: #000000, $alpha: .5);
-           transition:left 0.5s;
-           display:flex;
-           flex-direction:column;
-           padding:5px 0;
-           .Email__Text{
-               font-size:18px;
-               color:$Prim-Text-Colour;
-               margin-left:2%;
-               word-break: break-all;
-               .Email__Text--Highlight{
-                   color: $Highlight-Colour;
-               }
-           }
+body {
+    background-color: $Background-Colour;
+    font-family: "Montserrat", sans-serif;
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        .Email {
+            position: fixed;
+            background-color: $Box-Colour;
+            border-radius: 1em;
+            width: 60%;
+            text-align: center;
+            bottom: 5%;
+            left: -70%;
+            box-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.5);
+            transition: left 0.5s;
+            display: flex;
+            flex-direction: column;
+            padding: 5px 0;
+            .Email__Text {
+                font-size: 18px;
+                color: $Prim-Text-Colour;
+                margin-left: 2%;
+                word-break: break-all;
+                .Email__Text--Highlight {
+                    color: $Highlight-Colour;
+                }
+            }
         }
-        .Email--Toggled{
-            bottom:5%;
-            left:20%;
+        .Email--Toggled {
+            bottom: 5%;
+            left: 20%;
         }
-        .Email__Link{
+        .Email__Link {
             color: $Highlight-Colour;
             font-weight: 500;
-            margin:5px 0;
+            margin: 5px 0;
         }
-    }
-    .Profile{
-        width:100%;
-        display:flex;
-        flex-direction:column;
-        flex-wrap: wrap;
-        align-items:center;
-        
-        .Profile__Image{
-            width:40%;
-            display:inline;
-            border-radius:100em;
-            object-fit: cover;
-            margin:67px 0 31px 0;
-        }
+        .Profile {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
 
-        .Profile__Headline1{
-            color:$Prim-Text-Colour;
-            font-weight:400;
-            font-size:23px;
-        }
-    }
-
-
-    .Skills{
-        background-color:$Box-Colour;
-        width:78%;
-        border-radius:1em;
-        padding:23px 10px 10px 8%;
-        box-sizing: border-box;
-        display:flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        margin:28px 0;
-        box-shadow:0 0 6px rgba($color: #000000, $alpha: .5);
-        .Skills__Headline2{
-            color:$Highlight-Colour;
-            font-size:23px;
-            font-weight:500;
-            margin-bottom:13px;
-        }
-
-        .Skills__Paragraph{
-            font-size:23px;
-            font-weight: 200;
-            margin-bottom:13px;
-            color:$Prim-Text-Colour;
-        }
-
-        .Skills__Button{
-            outline:none;
-            border:none;
-            color:$Highlight-Colour;
-            background-color:transparent;
-            font-size:16px;
-            font-weight:200;
-            width:fit-content;
-            align-self:end;
-            margin-right:25px;
-        }
-    }
-
-    .Credentials{
-        background-color:$Box-Colour;
-        width:78%;
-        border-radius:1em;
-        padding:23px 10px 10px 8%;
-        box-sizing: border-box;
-        display:flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        margin:28px 0;
-        box-shadow:0 0 6px rgba($color: #000000, $alpha: .5);
-        .Credentials__Headline2{
-            color:$Highlight-Colour;
-            font-size:23px;
-            font-weight:500;
-            margin-bottom:13px;
-        }
-
-        .Credentials__Paragraph{
-            font-size:23px;
-            font-weight: 200;
-            margin-bottom:13px;
-            color:$Prim-Text-Colour;
-
-            .Credentials__Paragraph--Highlight{
-                color:$Highlight-Colour;
+            .Profile__Image {
+                width: 40%;
+                display: inline;
+                border-radius: 100em;
+                object-fit: cover;
+                margin: 67px 0 31px 0;
             }
-        }
-    } 
 
-    .Facts{
-        background-color:$Box-Colour;
-        width:78%;
-        border-radius:1em;
-        padding:23px 10px 10px 8%;
-        box-sizing: border-box;
-        display:flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        margin:28px 0;
-        box-shadow:0 0 6px rgba($color: #000000, $alpha: .5);
-        .Facts__Headline2{
-            color:$Highlight-Colour;
-            font-size:23px;
-            font-weight:500;
-            margin-bottom:13px;
-        }
-
-        .Facts__Paragraph{
-            font-size:23px;
-            font-weight: 200;
-            margin-bottom:13px;
-            color:$Prim-Text-Colour;
-            .Facts__Paragraph--Highlight{
-                color:$Highlight-Colour;
+            .Profile__Headline1 {
+                color: $Prim-Text-Colour;
+                font-weight: 400;
+                font-size: 23px;
             }
         }
 
-        .Facts__Button{
-            outline:none;
-            border:none;
-            //position:relative;
-            color:$Highlight-Colour;
-            background-color:transparent;
-            bottom:5%;
-            left:30%;
-            font-size:16px;
-            font-weight:200;
-            width:fit-content;
-            align-self:end;
-            margin-right:25px;
-            //margin:0 15% 0 auto;
+        .Skills {
+            background-color: $Box-Colour;
+            width: 78%;
+            border-radius: 1em;
+            padding: 23px 10px 10px 8%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin: 28px 0;
+            box-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.5);
+            .Skills__Headline2 {
+                color: $Highlight-Colour;
+                font-size: 23px;
+                font-weight: 500;
+                margin-bottom: 13px;
+            }
+
+            .Skills__Paragraph {
+                font-size: 23px;
+                font-weight: 200;
+                margin-bottom: 13px;
+                color: $Prim-Text-Colour;
+            }
+
+            .Skills__Button {
+                outline: none;
+                border: none;
+                color: $Highlight-Colour;
+                background-color: transparent;
+                font-size: 16px;
+                font-weight: 200;
+                width: fit-content;
+                align-self: end;
+                margin-right: 25px;
+            }
         }
-    }
-    .Links{
-        display:flex;
-        flex-direction:column;
-        flex-wrap: wrap;
-        .Links__Item{
+
+        .Credentials {
+            background-color: $Box-Colour;
+            width: 78%;
+            border-radius: 1em;
+            padding: 23px 10px 10px 8%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin: 28px 0;
+            box-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.5);
+            .Credentials__Headline2 {
+                color: $Highlight-Colour;
+                font-size: 23px;
+                font-weight: 500;
+                margin-bottom: 13px;
+            }
+
+            .Credentials__Paragraph {
+                font-size: 23px;
+                font-weight: 200;
+                margin-bottom: 13px;
+                color: $Prim-Text-Colour;
+
+                .Credentials__Paragraph--Highlight {
+                    color: $Highlight-Colour;
+                }
+            }
+        }
+
+        .Facts {
+            background-color: $Box-Colour;
+            width: 78%;
+            border-radius: 1em;
+            padding: 23px 10px 10px 8%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin: 28px 0;
+            box-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.5);
+            .Facts__Headline2 {
+                color: $Highlight-Colour;
+                font-size: 23px;
+                font-weight: 500;
+                margin-bottom: 13px;
+            }
+
+            .Facts__Paragraph {
+                font-size: 23px;
+                font-weight: 200;
+                margin-bottom: 13px;
+                color: $Prim-Text-Colour;
+                .Facts__Paragraph--Highlight {
+                    color: $Highlight-Colour;
+                }
+            }
+
+            .Facts__Button {
+                outline: none;
+                border: none;
+                //position:relative;
+                color: $Highlight-Colour;
+                background-color: transparent;
+                bottom: 5%;
+                left: 30%;
+                font-size: 16px;
+                font-weight: 200;
+                width: fit-content;
+                align-self: end;
+                margin-right: 25px;
+                //margin:0 15% 0 auto;
+            }
+        }
+        .Links {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            .Links__Item {
+                display: flex;
+                text-decoration: none;
+                margin: 21px 0;
+                background-color: transparent;
+                outline: none;
+                border: none;
+                width: fit-content;
+                cursor: pointer;
+                .Links__Item__Image {
+                    width: 32px;
+                }
+                .Links__Item__Text {
+                    color: $Highlight-Colour;
+                    font-size: 18px;
+                    align-self: center;
+                    margin-left: 30px;
+                }
+            }
+        }
+        .Unfolded{
             display:flex;
-            text-decoration:none;
-            margin:21px 0;
-            background-color: transparent;
-            outline:none;
-            border:none;
-            width: fit-content;
-            cursor:pointer;
-            .Links__Item__Image{
-                width:32px;
+            width:100%;
+            position:fixed;
+            flex-direction:column;
+            align-items:center;
+            background-color:$Background-Colour;
+            height:0;
+            transition: height 0.5s;
+            overflow-y:hidden;
+            .Unfolded__Skills{
+                margin:auto 0;
+                display:none;
+                background-color: $Box-Colour;
+                width:92%;
+                box-sizing:border-box;
+                border-radius:1em;
+                box-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.5);  
+                padding:13px 13px 0 15px;
+                height:90vh;
+                .Unfolded__Skills__Top{
+                    display:flex;
+                    flex-wrap: nowrap;
+                    justify-content:space-between;
+                    margin-bottom:70px;
+                    .Unfolded__Skills__Top__Headline3{
+                        font-size:23px;
+                        color:$Prim-Text-Colour;
+                        .Unfolded__Skills__Top__Headline3--Highlight{
+                            color:$Highlight-Colour;
+                        }
+                    }
+                    .Unfolded__Skills__Top__Button{
+                        background-color:transparent;
+                        outline:none;
+                        border:none;
+                        width:35px;
+                        img{
+                            width:100%;
+                            display:block;
+                        }
+                    }
+                }
+                .Unfolded__Skills__Paragraph{
+                    color:$Prim-Text-Colour;
+                    .Unfolded__Skills__Paragraph--Highlight{
+                        color:$Highlight-Colour;
+                    }
+                }
             }
-            .Links__Item__Text{
-                color:$Highlight-Colour;
-                font-size:18px;
-                align-self:center;
-                margin-left:30px;
+
+            .Unfolded__Facts{
+                margin:auto 0;
+                display:none;
+                background-color: $Box-Colour;
+                width:92%;
+                box-sizing:border-box;
+                border-radius:1em;
+                box-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.5);  
+                padding:13px 13px 0 15px;
+                height:90vh;
+                .Unfolded__Facts__Top{
+                    display:flex;
+                    flex-wrap: nowrap;
+                    justify-content:space-between;
+                    margin-bottom:70px;
+                    .Unfolded__Facts__Top__Headline3{
+                        font-size:23px;
+                        color:$Prim-Text-Colour;
+                        .Unfolded__Facts__Top__Headline3--Highlight{
+                            color:$Highlight-Colour;
+                        }
+                    }
+                    .Unfolded__Facts__Top__Button{
+                        background-color:transparent;
+                        outline:none;
+                        border:none;
+                        width:35px;
+                        img{
+                            width:100%;
+                            display:block;
+                        }
+                    }
+                }
+                .Unfolded__Facts__Paragraph{
+                    color:$Prim-Text-Colour;
+                    .Unfolded__Facts__Paragraph--Highlight{
+                        color:$Highlight-Colour;
+                    }
+                }
             }
+        }
+        .Unfolded--Active{
+            height:100vh;
+        }
+        .Unfolded__Element--Active{
+            display: block !important;
         }
     }
 }
 
 @media only screen and (min-width: 1000px) {
-    body{
-        display:grid;
-        grid-template-columns:1fr;
-        justify-items:center;
-        main{
-            grid-template-columns:1.2fr 2fr;
-            max-width:1000px;
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        main {
+            grid-template-columns: 1.2fr 2fr;
+            max-width: 1000px;
 
-            .Email{
-                width:30%;
-                text-align:center; 
-                bottom:-15%;
-                left:auto;
-                transition:bottom 0.5s;
-                display:grid;
-                grid-template-columns:2fr 1fr;
-                padding:5px 0;
-                max-width:320px;
-                .Email__Text{
-                    color:$Prim-Text-Colour;
-                    margin-left:2%;
+            .Email {
+                width: 30%;
+                text-align: center;
+                bottom: -15%;
+                left: auto;
+                transition: bottom 0.5s;
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                padding: 5px 0;
+                max-width: 320px;
+                .Email__Text {
+                    color: $Prim-Text-Colour;
+                    margin-left: 2%;
                     word-break: break-all;
-                    grid-column:1/2;
-                    .Email__Text--Highlight{
+                    grid-column: 1/2;
+                    .Email__Text--Highlight {
                         color: $Highlight-Colour;
                     }
                 }
-             }
-             .Email--Toggled{
-                 bottom:5%;
-             }
-             .Email__Link{
-                 color: $Highlight-Colour;
-                 font-weight: 500;
-                 margin:5px 0;
-                 grid-column:2/3;
-             }
+            }
+            .Email--Toggled {
+                bottom: 5%;
+            }
+            .Email__Link {
+                color: $Highlight-Colour;
+                font-weight: 500;
+                margin: 5px 0;
+                grid-column: 2/3;
+            }
 
-            .Profile{
-                width:55%;
-                grid-column:1/-1;
+            .Profile {
+                width: 55%;
+                grid-column: 1/-1;
                 flex-direction: row;
                 justify-content: space-between;
-                margin:67px 0 31px 0;
-                .Profile__Image{
-                    width:30%;
-                    margin:0;
+                margin: 67px 0 31px 0;
+                .Profile__Image {
+                    width: 30%;
+                    margin: 0;
                 }
-        
-                .Profile__Headline1{
-                    font-size:36px;
+
+                .Profile__Headline1 {
+                    font-size: 36px;
                 }
             }
 
-            .Effect__Skills{
-                grid-column:1/-2;
-                width:77.07%;
-                grid-row:2;
-                background-color:$Highlight-Colour;
-                border-radius:1em;
-                padding:23px 10px 10px 8%;
+            .Effect__Skills {
+                grid-column: 1/-2;
+                width: 77.07%;
+                grid-row: 2;
+                background-color: $Highlight-Colour;
+                border-radius: 1em;
+                padding: 23px 10px 10px 8%;
                 box-sizing: border-box;
-                height:210px;
-                margin:29px 0 0 37.5px;
-                transition:margin-top .4s,margin-left .4s;
+                height: 210px;
+                margin: 29px 0 0 37.5px;
+                transition: margin-top 0.4s, margin-left 0.4s;
             }
 
-            .Effect__Skills--Toggled{
-                margin-top:13px;
-                margin-left:7px;
+            .Effect__Skills--Toggled {
+                margin-top: 13px;
+                margin-left: 7px;
             }
 
-            .Skills{
-                grid-column:1/-2;
-                width:77.07%;
-                margin-left:10%;
-                grid-row:2;
-                height:216.5px;
-                .Skills__Effect{
-                    width:30%;
-                    height:216.5px;
-                    background-color:$Highlight-Colour;
-                    border-radius:1em;
+            .Skills {
+                grid-column: 1/-2;
+                width: 77.07%;
+                margin-left: 10%;
+                grid-row: 2;
+                height: 216.5px;
+                .Skills__Effect {
+                    width: 30%;
+                    height: 216.5px;
+                    background-color: $Highlight-Colour;
+                    border-radius: 1em;
                 }
 
-                .Skills__Headline2{
-                    font-size:18px;
+                .Skills__Headline2 {
+                    font-size: 18px;
                 }
-        
-                .Skills__Paragraph{
-                    font-size:18px;
+
+                .Skills__Paragraph {
+                    font-size: 18px;
                 }
-        
-                .Skills__Button{
-                    font-size:14px;
+
+                .Skills__Button {
+                    font-size: 14px;
                 }
             }
 
-            .Effect__Credentials{
-                grid-column:2/3;
-                width:86.24%;
-                grid-row:2;
-                background-color:$Highlight-Colour;
-                border-radius:1em;
-                padding:23px 10px 10px 8%;
+            .Effect__Credentials {
+                grid-column: 2/3;
+                width: 86.24%;
+                grid-row: 2;
+                background-color: $Highlight-Colour;
+                border-radius: 1em;
+                padding: 23px 10px 10px 8%;
                 box-sizing: border-box;
-                height:210px;
-                margin:29px 0 0 0;
-                transition:margin-top .4s,margin-right .4s;
+                height: 210px;
+                margin: 29px 0 0 0;
+                transition: margin-top 0.4s, margin-right 0.4s;
             }
 
-            .Effect__Credentials--Toggled{
-                margin-top:13px;
-                margin-right:28px;
+            .Effect__Credentials--Toggled {
+                margin-top: 13px;
+                margin-right: 28px;
             }
-            
-            .Credentials{
-                height:216.5px;
-                width:86.24%;
-                grid-column:2/3;
-                grid-row:2;
-                display:grid;
-                grid-template-columns:1fr 1fr;
-                .Credentials__Headline2{
-                    color:$Highlight-Colour;
-                    font-size:18px;
-                    grid-column:1/-1;
-                    grid-row:1;
+
+            .Credentials {
+                height: 216.5px;
+                width: 86.24%;
+                grid-column: 2/3;
+                grid-row: 2;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                .Credentials__Headline2 {
+                    color: $Highlight-Colour;
+                    font-size: 18px;
+                    grid-column: 1/-1;
+                    grid-row: 1;
                 }
-        
-                .Credentials__Paragraph{
-                    font-size:18px;  
-                    grid-row:2;  
-                    width:73.5%;
+
+                .Credentials__Paragraph {
+                    font-size: 18px;
+                    grid-row: 2;
+                    width: 73.5%;
                 }
             }
 
-            .Effect__Facts{
-                grid-column:1/-2;
-                width:77.07%;
-                grid-row:3;
-                background-color:$Highlight-Colour;
-                border-radius:1em;
-                padding:23px 10px 10px 8%;
+            .Effect__Facts {
+                grid-column: 1/-2;
+                width: 77.07%;
+                grid-row: 3;
+                background-color: $Highlight-Colour;
+                border-radius: 1em;
+                padding: 23px 10px 10px 8%;
                 box-sizing: border-box;
-                height:210px;
-                margin:29px 0 0 37.5px;
-                transition:margin-top .4s,margin-left .4s;
+                height: 210px;
+                margin: 29px 0 0 37.5px;
+                transition: margin-top 0.4s, margin-left 0.4s;
             }
 
-            .Effect__Facts--Toggled{
-                margin-top:13px;
-                margin-left:7px;
+            .Effect__Facts--Toggled {
+                margin-top: 13px;
+                margin-left: 7px;
             }
 
-            .Facts{
-                grid-column:1/-2;
-                grid-row:3;
-                width:77.07%;
-                margin-left:10%;
-                height:216.5px;
+            .Facts {
+                grid-column: 1/-2;
+                grid-row: 3;
+                width: 77.07%;
+                margin-left: 10%;
+                height: 216.5px;
                 //height:fit-content;
-                .Facts__Headline2{
-                    font-size:18px;
+                .Facts__Headline2 {
+                    font-size: 18px;
                 }
-        
-                .Facts__Paragraph{
-                    font-size:18px;
+
+                .Facts__Paragraph {
+                    font-size: 18px;
                 }
-        
-                .Facts__Button{
-                    font-size:14px;
+
+                .Facts__Button {
+                    font-size: 14px;
                 }
             }
-            .Links{
-                display:grid;
-                grid-template-columns:1fr 1fr;
-                grid-template-rows:50px 50px 50px;
-                justify-content:space-between;
-                width:86.24%;
-                margin-top:12px;
-                .Links__Item{
-                    margin:16px 0;
-                    height:fit-content;
-                    .Links__Item__Image{
-                        width:32px;
+            .Links {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 50px 50px 50px;
+                justify-content: space-between;
+                width: 86.24%;
+                margin-top: 12px;
+                .Links__Item {
+                    margin: 16px 0;
+                    height: fit-content;
+                    .Links__Item__Image {
+                        width: 32px;
                     }
-                    .Links__Item__Text{
-                        font-size:18px;
+                    .Links__Item__Text {
+                        font-size: 18px;
                     }
                 }
+            }
+            .Unfolded{
+                top:10%;
+                display:flex;
+                width:50%;
+                background-color:transparent;
+                height:600px;
+                left:-50%;
+                transition: left 0.5s;
+                .Unfolded__Skills{
+                    margin:auto 0;
+                    width:92%;
+                    padding:13px 13px 0 15px;
+                    height:400px;
+                    overflow-y: scroll;
+                    .Unfolded__Skills__Top{
+                        margin-bottom:70px;
+                        .Unfolded__Skills__Top__Headline3{
+                            font-size:23px;
+                        }
+                        .Unfolded__Skills__Top__Button{
+                            width:35px;
+                        }
+                    }
+                }
+    
+                .Unfolded__Facts{
+                    margin:auto 0;
+                    width:92%;
+                    padding:13px 13px 0 15px;
+                    height:400px;
+                    overflow-y: scroll;
+                    .Unfolded__Facts__Top{
+                        margin-bottom:70px;
+                        .Unfolded__Facts__Top__Headline3{
+                            font-size:23px;
+                        }
+                        .Unfolded__Facts__Top__Button{
+                            width:35px;
+                        }
+                    }
+                }
+            }
+            .Unfolded--Active{
+                left:25%;
+            }
+            .Unfolded__Element--Active{
+                display: block !important;
             }
         }
     }
