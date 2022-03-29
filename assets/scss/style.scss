@@ -247,6 +247,7 @@ body {
                 }
                 .Unfolded__Skills__Paragraph{
                     color:$Prim-Text-Colour;
+                    font-size:18px;
                     .Unfolded__Skills__Paragraph--Highlight{
                         color:$Highlight-Colour;
                     }
@@ -288,6 +289,7 @@ body {
                 }
                 .Unfolded__Facts__Paragraph{
                     color:$Prim-Text-Colour;
+                    font-size:18px;
                     .Unfolded__Facts__Paragraph--Highlight{
                         color:$Highlight-Colour;
                     }
@@ -511,13 +513,16 @@ body {
                     height:400px;
                     overflow-y: scroll;
                     .Unfolded__Skills__Top{
-                        margin-bottom:70px;
+                        margin-bottom:50px;
                         .Unfolded__Skills__Top__Headline3{
                             font-size:23px;
                         }
                         .Unfolded__Skills__Top__Button{
                             width:35px;
                         }
+                    }
+                    .Unfolded__Skills__Paragraph{
+                        font-size:14px;
                     }
                 }
     
@@ -528,13 +533,16 @@ body {
                     height:400px;
                     overflow-y: scroll;
                     .Unfolded__Facts__Top{
-                        margin-bottom:70px;
+                        margin-bottom:50px;
                         .Unfolded__Facts__Top__Headline3{
                             font-size:23px;
                         }
                         .Unfolded__Facts__Top__Button{
                             width:35px;
                         }
+                    }
+                    .Unfolded__Facts__Paragraph{
+                        font-size:14px;
                     }
                 }
             }
