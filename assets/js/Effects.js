@@ -13,8 +13,6 @@ const UnfoldedFacts = document.querySelector(".Unfolded__Facts")
 const UnfoldedSkillsButton = document.querySelector(".Unfolded__Skills__Top__Button")
 const UnfoldedFactsButton = document.querySelector(".Unfolded__Facts__Top__Button")
 
-console.log(EffectSkills);
-
 Skills.addEventListener("mouseover",function(event){
     EffectSkills.classList.add("Effect__Skills--Toggled")
 })
@@ -38,8 +36,6 @@ Facts.addEventListener("mouseover",function(event){
 Facts.addEventListener("mouseleave",function(event){
     EffectsFacts.classList.remove("Effect__Facts--Toggled")
 })
-
-console.log(Links.querySelector("button"));
 
 Links.querySelector("button").addEventListener("click",function(event){
     if (!document.querySelector(".Email").classList.contains("Email--Toggled")){
@@ -67,12 +63,12 @@ FactsButton.addEventListener("click",function(){
 
 UnfoldedSkillsButton.addEventListener("click",function(){
     Unfolded.classList.remove("Unfolded--Active")
-    UnfoldedSkills.classList.remove("Unfolded__Element--Active")
+    setTimeout(function(){UnfoldedSkills.classList.remove("Unfolded__Element--Active");},500)
     document.querySelector("body").style.overflow = "auto"
 })
 
 UnfoldedFactsButton.addEventListener("click",function(){
     Unfolded.classList.remove("Unfolded--Active")
-    UnfoldedFacts.classList.remove("Unfolded__Element--Active")
+    setTimeout(function(){UnfoldedFacts.classList.remove("Unfolded__Element--Active");},500)
     document.querySelector("body").style.overflow = "auto"
 })
